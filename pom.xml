@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ibm.common</groupId>
+  <groupId>com.wl.activitystream</groupId>
   <artifactId>activitystreams</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -19,6 +19,15 @@
       </roles>
       <timezone>-8</timezone>
     </developer>
+    <developer>
+      <id>worldline</id>
+      <organization>Worldline</organization>
+      <organizationUrl>http://www.worldline.com</organizationUrl>
+      <roles>
+        <role>fork</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
   </developers>
   
   <licenses>
@@ -34,8 +43,8 @@
     <url>http://www.ibm.com</url>
   </organization>
   <scm>
-    <developerConnection>scm:https://github.com/OpenSocial/incubator.git</developerConnection>
-    <url>http://github.com/OpenSocial/activitystreams</url>
+    <developerConnection>scm:https://github.com/worldline-messaging/activitystreams</developerConnection>
+    <url>https://github.com/worldline-messaging/activitystreams</url>
   </scm>
   
   <properties>
@@ -76,10 +85,10 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  <url>http://github.com/OpenSocial/activitystreams</url>
+  <url>https://github.com/worldline-messaging/activitystreams</url>
   <description>An implementation of the Activity Streams 2.0 data format.</description>
   <inceptionYear>2013</inceptionYear>
   <issueManagement>
-    <url>https://github.com/OpenSocial/activitystreams/issues</url>
+    <url>https://github.com/worldline-messaging/activitystreams/issues</url>
   </issueManagement>
 </project>
