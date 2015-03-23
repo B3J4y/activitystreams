@@ -52,6 +52,7 @@ import static org.joda.time.Duration.standardSeconds;
 
 import java.io.ObjectStreamException;
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.Callable;
@@ -1532,7 +1533,8 @@ public class ASObject
     }   
   }
   
-  protected final ImmutableMap<String,Object> map;
+  //MUT: Map instead of ImmutableMap
+  protected final Map<String,Object> map;
   private transient int hash = 1;
   
   /**
@@ -1543,8 +1545,60 @@ public class ASObject
     super(builder);
     if (builder.actions.notEmpty())
       builder.map.put("actions", builder.actions.get());
-    this.map = ImmutableMap.copyOf(builder.map);
+    //MUT: new HashMap() instead of ImmutableMap.copyOf()
+    this.map = newLinkedHashMap(builder.map);
   }
+  
+  //--------------------------------------------------------------------------------------------------------------
+  //MUT:				SETTER FOR MUTABILITY
+  //--------------------------------------------------------------------------------------------------------------
+  /**
+   * Set a property
+   * @param key String
+   * @param value V
+   * @return B 
+   **/
+  public void set(String key, Object value) {
+    if (value == null) 
+      return;
+    if (value instanceof Supplier)
+      map.put(key, ((Supplier<?>)value).get());
+    else
+      map.put(key, value);
+  }
+  
+  /**
+   * Set a property
+   * @param key String
+   * @param value Supplier<V>
+   * @return B 
+   **/
+  public void set(String key, Supplier<?> value) {
+    try {
+      if(value != null){
+    	  set(key,value.get());
+      }
+    } catch (Throwable t) {
+      throw propagate(t);
+    }
+  }
+  
+  /**
+   * Set a property from a given callable
+   * @param key String
+   * @param value Callable<V>
+   * @return B 
+   **/
+  public void set(String key, Callable<?> value) {
+    try {
+      if(value != null){
+    	  set(key,value.call());
+      }
+    } catch (Throwable t) {
+      throw propagate(t);
+    }
+  }
+  //--------------------------------------------------------------------------------------------------------------
   
   /**
    * Returns true if the given property exists, does not 
@@ -1855,6 +1909,11 @@ public class ASObject
    **/
   public String id() {
     return this.getString("id");
+  }
+  
+  //MUT: setter for mutability
+  public void setId(String id) {
+	  this.set("id", id);
   }
   
   /**
@@ -2448,12 +2507,22 @@ public class ASObject
     return this.getDateTime("published");
   }
   
+  //MUT: setter for mutability
+  public void setPublished(DateTime pub) {
+	  this.set("published", pub);
+  }
+  
   /**
    * Return the updated timestamp for this object
    * @return DateTime 
    **/
   public DateTime updated() {
     return this.getDateTime("updated");
+  }
+  
+  //MUT: setter for mutability
+  public void setUpdated(DateTime pub) {
+	  this.set("updated", pub);
   }
   
   /**

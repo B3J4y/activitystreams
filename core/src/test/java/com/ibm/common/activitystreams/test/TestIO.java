@@ -21,6 +21,7 @@
  */
 package com.ibm.common.activitystreams.test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -49,7 +50,7 @@ public final class TestIO {
     final String out = "{\n  \"a\": 1,\n  \"b\": 2\n}";
     IO io = IO.makeDefaultPrettyPrint();
     assertNotNull(io);
-    assertTrue(io.read(in).toString(io).equals(out));
+    assertEquals(io.read(in).toString(io), out);
   }
   
   @Test

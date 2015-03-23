@@ -219,6 +219,7 @@ public final class GsonWrapper {
       builder.adapters.build());
     if (builder.pretty)
       b.setPrettyPrinting();
+    b.disableHtmlEscaping();
     this.gson = b.create();
     this.charset = builder.charset;
   }

@@ -93,7 +93,7 @@ public abstract class AbstractWritable
     
   }
   
-  private final IO io;
+  private IO io;
 
   protected AbstractWritable(AbstractWritableBuilder<?,?> b) {
     this.io = b.io != null ? b.io : makeDefault();
@@ -130,6 +130,10 @@ public abstract class AbstractWritable
   public Future<?> writeTo(Writer out, IO io, ExecutorService executor) {
     return io.write(this, out, executor);
   }
+  
+  public void writeUsing(IO io) {
+      this.io = io;
+    }
   
   public String toString(IO io) {
     StringWriter sw = 
