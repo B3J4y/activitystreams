@@ -50,6 +50,8 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- github server corresponds to entry in ~/.m2/settings.xml -->
+    <github.global.oauth2Token>1fd964b68f1d12f77d252a90d7ea1ce716c1b961</github.global.oauth2Token>
   </properties>
   
   <modules>
