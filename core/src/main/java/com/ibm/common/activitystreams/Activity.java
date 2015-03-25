@@ -658,6 +658,29 @@ public class Activity
   public LinkValue firstActor() {
     return firstLink("actor");
   }
+
+  /**
+   * Return the first actor identifier
+   * @return LinkValue
+   */
+  public String firstActorId() {
+	  String result = null;
+	  LinkValue actor = firstLink("actor");
+	  switch(actor.valueType()) {
+	  case SIMPLE:
+		  SimpleLinkValue s = (SimpleLinkValue)actor;
+		  result =  s.url();
+		  break;
+	  case OBJECT:
+		  ASObject obj = (ASObject)actor;
+		  result = obj.getString("id");
+		  break;
+	  default:
+		  // should never append
+		  throw new IllegalStateException("Actor shouldn't be a LinkValue of type " + actor.valueType());
+	  }
+	  return result;
+  }
   
   /**
    * Return the first matching actor
