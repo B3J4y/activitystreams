@@ -673,7 +673,7 @@ public class Activity
 		  break;
 	  case OBJECT:
 		  ASObject obj = (ASObject)actor;
-		  result = obj.getString("id");
+		  result = obj.id();
 		  break;
 	  default:
 		  // should never append
