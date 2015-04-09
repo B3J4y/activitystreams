@@ -7,6 +7,8 @@ import java.util.Locale;
 import com.google.common.base.Optional;
 import com.ibm.common.activitystreams.ASObject;
 import com.ibm.common.activitystreams.LinkValue;
+import com.ibm.common.activitystreams.TypeValue;
+import com.ibm.common.activitystreams.TypeValue.SimpleTypeValue;
 import com.ibm.common.activitystreams.ValueType;
 import com.ibm.common.activitystreams.LinkValue.SimpleLinkValue;
 public final class Util {
@@ -34,6 +36,25 @@ public final class Util {
 				break;
 			case OBJECT:
 				id =  ((ASObject)linkValue).id();
+				break;
+			default:
+				break;
+			}
+		}
+		return Optional.fromNullable("".equals(id) ? null : id); // empty string is considered as a null value
+	}
+	
+
+	public static final Optional<String> getIdFromTypeValue(TypeValue value) {
+		String id = null;
+
+		if (value != null) {
+			switch (value.valueType()) {
+			case SIMPLE:
+				id =  ((SimpleTypeValue)value).id();
+				break;
+			case OBJECT:
+				id =  ((ASObject)value).id();
 				break;
 			default:
 				break;
