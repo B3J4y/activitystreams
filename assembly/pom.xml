@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.worldline.activitystream</groupId>
     <artifactId>activitystreams</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
   </parent>
   <artifactId>assembly</artifactId>
   <name>Activity Streams 2.0 - Assembly</name>
@@ -12,22 +12,22 @@
     <dependency>
       <groupId>com.worldline.activitystream</groupId>
       <artifactId>activitystreams-core</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.worldline.activitystream</groupId>
       <artifactId>activitystreams-actions</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.worldline.activitystream</groupId>
       <artifactId>activitystreams-geo</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.worldline.activitystream</groupId>
       <artifactId>activitystreams-legacy</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
   </dependencies>
   
