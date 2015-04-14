@@ -1,4 +1,4 @@
-# Activity Streams 2.0 Reference Implementation
+# Activity Streams 2.0 Reference Implementation [![Build Status](https://travis-ci.org/worldline-messaging/activitystreams.svg?branch=v0.0.1)](https://travis-ci.org/worldline-messaging/activitystreams)
 
 ## Getting Started
 
