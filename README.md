@@ -12,9 +12,9 @@ Use Maven to build.
 
 ```xml
 <dependency>
-  <groupId>com.ibm.common</groupId>
+  <groupId>com.worldline.activitystream</groupId>
   <artifactId>activitystreams</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
 </dependency>
 ```
 
