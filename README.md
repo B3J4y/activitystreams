@@ -1,4 +1,4 @@
-# Activity Streams 2.0 Reference Implementation
+# Activity Streams 2.0 Reference Implementation [![Build Status](https://travis-ci.org/worldline-messaging/activitystreams.svg?branch=v0.0.1)](https://travis-ci.org/worldline-messaging/activitystreams)
 
 ## Getting Started
 
@@ -12,9 +12,9 @@ Use Maven to build.
 
 ```xml
 <dependency>
-  <groupId>com.ibm.common</groupId>
+  <groupId>com.worldline.activitystream</groupId>
   <artifactId>activitystreams</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
 </dependency>
 ```
 
