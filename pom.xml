@@ -97,7 +97,7 @@
 		<url>https://github.com/worldline-messaging/activitystreams/issues</url>
 	</issueManagement>
 
-	<distributionManagement>
+<!-- 	<distributionManagement>
 		<repository>
 			<id>OSS-Sonatype</id>
 			<name>OSS Releases</name>
@@ -108,7 +108,7 @@
 			<name>Internal Releases</name>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
-	</distributionManagement>
+	</distributionManagement> -->
 
 	<build>
 		<plugins>
