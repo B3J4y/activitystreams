@@ -72,7 +72,7 @@ public class IntentActionHandler
   
   /**
    * Constructor for IntentActionHandler.
-   * @param builder AbstractBuilder<?,?>
+   * @param builder AbstractBuilder
    */
   protected IntentActionHandler(AbstractBuilder<?,?> builder) {
     super(builder);

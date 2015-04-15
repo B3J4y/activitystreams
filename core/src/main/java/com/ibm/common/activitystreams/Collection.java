@@ -394,7 +394,7 @@ public class Collection
   
   /**
    * Constructor for Collection.
-   * @param builder Collection.AbstractBuilder<?,?>
+   * @param builder Collection.AbstractBuilder
    */
   Collection(Collection.AbstractBuilder<?, ?> builder) {
     super(builder);
@@ -445,7 +445,7 @@ public class Collection
   /**
    * Returns a listing of Paging links that 
    * exist on this collection
-   * @return Iterable&lt;Page>
+   * @return Iterable&lt;Page&gt;
    */
   public Iterable<Page> pages() {
     ImmutableSet.Builder<Page> pages = 
@@ -459,7 +459,7 @@ public class Collection
   /**
    * Returns a listing of Paging LinkValues
    * @param page Page The type of paging link to return
-   * @return Iterable&lt;LinkValue>
+   * @return Iterable&lt;LinkValue&gt;
    */
   public Iterable<LinkValue> pageLink(
     Page page) {
@@ -469,8 +469,8 @@ public class Collection
   /**
    * Returns a listing of Paging LinkValues
    * @param page Page The type of paging link to return
-   * @param filter Predicate<? super LinkValue> A filter
-   * @return Iterable&lt;LinkValue>
+   * @param filter Predicate A filter
+   * @return Iterable
    */
   public Iterable<LinkValue> pageLink(
     Page page, 
@@ -491,7 +491,7 @@ public class Collection
   /**
    * Returns the first matching paging LinkValue
    * @param page Page the type of paging link to return
-   * @param test com.google.common.base.Predicate<? super LinkValue> a filter
+   * @param test com.google.common.base.Predicate a filter
    * @return LinkValue
    */
   public LinkValue firstMatchingPageLink(
@@ -502,7 +502,7 @@ public class Collection
   
   /**
    * Returns the collection of items
-   * @return java.util.Iterable<A> 
+   * @return java.util.Iterable
    **/
   public <A extends ASObject>Iterable<A> items() {
     return this.<Iterable<A>>get("items");
@@ -510,8 +510,8 @@ public class Collection
   
   /**
    * Returns a filtered collection of items
-   * @param filter com.google.common.base.Predicate<? super A> filter
-   * @return java.util.Iterable<A>
+   * @param filter com.google.common.base.Predicate filter
+   * @return java.util.Iterable
    */
   public <A extends ASObject>Iterable<A> items(
     Predicate<? super A> filter) {

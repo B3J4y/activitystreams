@@ -86,7 +86,7 @@ public final class TypedPayload
     
     /**
      * Method schema.
-     * @param lv Supplier<? extends LinkValue>
+     * @param lv Supplier&lt;? extends LinkValue&gt;
      * @return Builder
      */
     public Builder schema(Supplier<? extends LinkValue> lv) {

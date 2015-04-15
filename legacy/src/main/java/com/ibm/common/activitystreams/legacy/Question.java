@@ -81,7 +81,7 @@ public class Question extends ASObject {
     
     /**
      * Add an answer to the question
-     * @param link Supplier&lt;? extends LinkValue>
+     * @param link Supplier&lt;? extendsc
      * @return Builder
      */
     public Builder option(Supplier<? extends LinkValue> link) {
@@ -111,7 +111,7 @@ public class Question extends ASObject {
 
   /**
    * Get the list of options for the question
-   * @param filter Predicate&lt;? super LinkValue>
+   * @param filter Predicate&lt;? super LinkValue&gt;
    * @return Iterable&lt;LinkValue>
    */
   public Iterable<LinkValue> options(Predicate<? super LinkValue> filter) {

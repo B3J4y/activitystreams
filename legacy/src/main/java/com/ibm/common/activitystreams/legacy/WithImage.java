@@ -50,7 +50,7 @@ public class WithImage extends ASObject {
     
     /**
      * Set the fullImage property
-     * @param link Supplier&lt;? extends MediaLink>
+     * @param link Supplier&lt;? extends MediaLink&gt;
      * @return Builder
      */
     public Builder fullImage(Supplier<? extends MediaLink> link) {

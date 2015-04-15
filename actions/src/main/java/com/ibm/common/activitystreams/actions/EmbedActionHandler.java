@@ -107,7 +107,7 @@ public class EmbedActionHandler
     
     /**
      * Method style.
-     * @param style Supplier<StylesValue>
+     * @param style Supplier&lt;StylesValue&gt;
      * @return B
      */
     public B style(Supplier<StylesValue> style) {
@@ -127,7 +127,7 @@ public class EmbedActionHandler
     
     /**
      * Method style.
-     * @param styles Supplier<StylesValue>[]
+     * @param styles Supplier&lt;StylesValue&gt;[]
      * @return B
      */
     public B style(Supplier<StylesValue>... styles) {
@@ -161,7 +161,7 @@ public class EmbedActionHandler
   
   /**
    * Constructor for EmbedActionHandler.
-   * @param builder AbstractBuilder<?,?>
+   * @param builder AbstractBuilder&lt;?,?&gt;
    */
   protected EmbedActionHandler(AbstractBuilder<?,?> builder) {
     super(builder);
@@ -169,7 +169,7 @@ public class EmbedActionHandler
 
   /**
    * Method styles.
-   * @return Iterable<StylesValue>
+   * @return Iterable&lt;StylesValue&gt;
    */
   @SuppressWarnings("unchecked")
   public Iterable<StylesValue> styles() {
@@ -184,7 +184,7 @@ public class EmbedActionHandler
   /**
    * Method styles.
    * @param media String
-   * @return Iterable<StylesValue>
+   * @return Iterable&lt;StylesValue&gt;
    */
   public Iterable<StylesValue> styles(final String media) {
     checkNotNull(media);
@@ -197,8 +197,8 @@ public class EmbedActionHandler
   
   /**
    * Method styles.
-   * @param matcher Predicate<StylesValue>
-   * @return Iterable<StylesValue>
+   * @param matcher Predicate&lt;StylesValue&gt;
+   * @return Iterable&lt;StylesValue&gt;
    */
   public Iterable<StylesValue> styles(Predicate<StylesValue> matcher) {
     return filter(styles(), matcher);

@@ -77,7 +77,7 @@ public abstract class ActionHandler
     
     /**
      * Method context.
-     * @param obj Supplier<? extends ASObject>
+     * @param obj Supplier&lt;? extends ASObject&gt;
      * @return B
      */
     public B context(Supplier<? extends ASObject> obj) {
@@ -112,7 +112,7 @@ public abstract class ActionHandler
     
     /**
      * Method requires.
-     * @param lv Supplier<? extends LinkValue>
+     * @param lv Supplier&lt;? extends LinkValue&gt;
      * @return B
      */
     public B requires(Supplier<? extends LinkValue> lv) {
@@ -147,7 +147,7 @@ public abstract class ActionHandler
     
     /**
      * Method prefers.
-     * @param lv Supplier<? extends LinkValue>
+     * @param lv Supplier&lt;? extends LinkValue&gt;
      * @return B
      */
     public B prefers(Supplier<? extends LinkValue> lv) {
@@ -182,7 +182,7 @@ public abstract class ActionHandler
     
     /**
      * Method expects.
-     * @param tv Supplier<? extends LinkValue>
+     * @param tv Supplier&lt;? extends LinkValue&gt;
      * @return B
      */
     public B expects(Supplier<? extends LinkValue> tv) {
@@ -217,7 +217,7 @@ public abstract class ActionHandler
     
     /**
      * Method returns.
-     * @param tv Supplier<? extends LinkValue>
+     * @param tv Supplier&lt;? extends LinkValue&gt;
      * @return B
      */
     public B returns(Supplier<? extends LinkValue> tv) {
@@ -238,7 +238,7 @@ public abstract class ActionHandler
     /**
      * Method auth.
      * @param key String
-     * @param obj Supplier<? extends ASObject>
+     * @param obj Supplier&lt;? extends ASObject&gt;
      * @return B
      */
     public B auth(String key, Supplier<? extends ASObject> obj) {
@@ -265,7 +265,7 @@ public abstract class ActionHandler
   
   /**
    * Constructor for ActionHandler.
-   * @param builder Builder<?,?>
+   * @param builder Builder&lt;?,?&gt;
    */
   protected ActionHandler(Builder<?,?> builder) {
     super(builder);
@@ -289,7 +289,7 @@ public abstract class ActionHandler
   
   /**
    * Method expects.
-   * @return Iterable<LinkValue>
+   * @return Iterable&lt;LinkValue&gt;
    */
   public Iterable<LinkValue> expects() {
     return this.links("expects");
@@ -301,7 +301,7 @@ public abstract class ActionHandler
   
   /**
    * Method requires.
-   * @return Iterable<LinkValue>
+   * @return Iterable;LinkValue&gt;
    */
   public Iterable<LinkValue> requires() {
     return this.links("requires");
@@ -313,7 +313,7 @@ public abstract class ActionHandler
   
   /**
    * Method prefers.
-   * @return Iterable<LinkValue>
+   * @return Iterable;LinkValue&gt;
    */
   public Iterable<LinkValue> prefers() {
     return this.links("prefers");
@@ -325,7 +325,7 @@ public abstract class ActionHandler
   
   /**
    * Method returns.
-   * @return Iterable<LinkValue>
+   * @return Iterable;LinkValue&gt;
    */
   public Iterable<LinkValue> returns() {
     return this.links("returns");

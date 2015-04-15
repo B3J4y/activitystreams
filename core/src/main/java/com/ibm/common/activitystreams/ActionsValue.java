@@ -143,7 +143,7 @@ public final class ActionsValue
   /**
    * Get all Action Handlers associated with the given verb.
    * @param verb String
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    */
   public Iterable<LinkValue> get(String verb) {
     return super.getIterable(verb);
@@ -153,8 +153,8 @@ public final class ActionsValue
    * Get all Action Handlers associated with the given verb
    * that satisfy the given filter
    * @param verb String
-   * @param filter Predicate<LinkValue>
-   * @return java.util.Iterable<LinkValue>
+   * @param filter Predicate&lt;LinkValue&gt;
+   * @return java.util.Iterable&lt;LinkValue&gt;
    */
   public Iterable<LinkValue> get(
     String verb,
@@ -166,8 +166,8 @@ public final class ActionsValue
    * Get all Action Handlers associated with the given verb,
    * transformed using the given Transform function
    * @param verb String
-   * @param transform Function<LinkValue,Y>
-   * @return java.util.Iterable<Y>
+   * @param transform Function&lt;LinkValue,Y&gt;
+   * @return java.util.Iterable
    */
   public <Y> Iterable<Y> get(
     String verb,
@@ -180,9 +180,9 @@ public final class ActionsValue
    * filtered using the given Predicate and transformed
    * using the given Transform function.
    * @param verb String
-   * @param filter Predicate<LinkValue>
-   * @param transform Function<LinkValue,Y>
-   * @return java.util.Iterable<Y>
+   * @param filter Predicate&lt;LinkValue&gt;
+   * @param transform Function&lt;LinkValue,Y&gt;
+   * @return java.util.Iterable
    */
   public <Y> Iterable<Y> get(
     String verb,

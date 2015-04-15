@@ -93,7 +93,7 @@ public class HttpActionHandler
   
   /**
    * Constructor for HttpActionHandler.
-   * @param builder AbstractBuilder<?,?>
+   * @param builder AbstractBuilder
    */
   protected HttpActionHandler(AbstractBuilder<?,?> builder) {
     super(builder);

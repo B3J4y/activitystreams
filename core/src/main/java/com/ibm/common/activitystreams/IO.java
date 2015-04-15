@@ -108,7 +108,7 @@ public final class IO {
   
   /**
    * Create a new IO.Builder that uses the given schema
-   * @param schema Supplier<? extends Schema>
+   * @param schema Supplier
    * @return IO
    */
   public static IO makeWithSchema(Supplier<? extends Schema> schema) {
@@ -173,8 +173,8 @@ public final class IO {
     
     /**
      * Add an adapter
-     * @param type Class<? extends T>
-     * @param adapter Adapter<T>
+     * @param type Class
+     * @param adapter Adapter
      * @return Builder 
      **/
     public <T>Builder adapter(
@@ -186,7 +186,7 @@ public final class IO {
     
     /** 
      * Add an adapter
-     * @param type Class&lt;? extends T>
+     * @param type Class
      * @return Builder
      */
     public <T>Builder adapter(
@@ -196,7 +196,7 @@ public final class IO {
     
     /** 
      * Add an adapter
-     * @param type Class&lt;? extends T>
+     * @param type Class
      * @return Builder
      */
     public <T>Builder hierarchicalAdapter(
@@ -206,8 +206,8 @@ public final class IO {
     
     /**
      * Add an adapter.
-     * @param type Class<? extends T>
-     * @param adapter Adapter<T>
+     * @param type Class
+     * @param adapter Adapter
      * @param hier boolean
      * @return Builder 
      **/
@@ -231,7 +231,7 @@ public final class IO {
     
     /**
      * Set the schema.
-     * @param schema Supplier<Schema>
+     * @param schema Supplier
      * @return Builder 
      **/
     public Builder schema(Supplier<Schema> schema) {
@@ -276,7 +276,7 @@ public final class IO {
    * Asynchronously write the given object
    * @param w
    * @param executor
-   * @return java.util.concurrent.Future&lt;String>
+   * @return java.util.concurrent.Future&lt;String&gt;
    */
   public Future<String> write(
     final Writable w, 
@@ -304,7 +304,7 @@ public final class IO {
    * @param w
    * @param out
    * @param executor
-   * @return java.util.concurrent.Future&lt;?>
+   * @return java.util.concurrent.Future
    */
   public Future<?> write(
     final Writable w, 
@@ -324,7 +324,7 @@ public final class IO {
    * @param w
    * @param out
    * @param executor
-   * @return java.util.concurrent.Future&lt;?>
+   * @return java.util.concurrent.Future
    */
   public Future<?> write(
     final Writable w, 
@@ -354,7 +354,7 @@ public final class IO {
    * @param in
    * @param type
    * @param executor
-   * @return java.util.concurrent.Future&lt;A extends ASObject>
+   * @return java.util.concurrent.Future
    */
   public <A extends ASObject>Future<A> readAs(
     final InputStream in,
@@ -373,7 +373,7 @@ public final class IO {
    * Read the given input stream and return a parsed object
    * of the given type
    * @param in InputStream
-   * @param type Class<? extends A>
+   * @param type Class
    * @return A */
   public <A extends ASObject>A readAs(
     InputStream in, 
@@ -387,7 +387,7 @@ public final class IO {
    * @param in
    * @param type
    * @param executor
-   * @return java.util.concurrent.Future&lt;A extends ASObject>
+   * @return java.util.concurrent.Future
    */
   public <A extends ASObject>Future<A> readAs(
     final Reader in,
@@ -405,7 +405,7 @@ public final class IO {
   /**
    * Read the given reader and return a parsed object of the given type
    * @param in Reader
-   * @param type Class<? extends A>
+   * @param type Class
    * @return A */
   public <A extends ASObject>A readAs(
     Reader in, 
@@ -419,7 +419,7 @@ public final class IO {
    * @param in
    * @param type
    * @param executor
-   * @return java.util.concurrent.Future&lt;A extends ASObject>
+   * @return java.util.concurrent.Future
    */
   public <A extends ASObject>Future<A> readAs(
     final String in,
@@ -437,7 +437,7 @@ public final class IO {
   /**
    * Read the given string and return a parsed object of the given type
    * @param in String
-   * @param type Class<? extends A>
+   * @param type Class
    * @return A
    */
   public <A extends ASObject>A readAs(
@@ -450,7 +450,7 @@ public final class IO {
    * Asynchronously read the given string 
    * @param in
    * @param executor
-   * @return java.util.concurrent.Future&lt;ASObject>
+   * @return java.util.concurrent.Future
    */
   public Future<ASObject> read(String in, ExecutorService executor) {
     return read(new StringReader(in), executor);
@@ -469,7 +469,7 @@ public final class IO {
    * Asynchronously read the given inputstream
    * @param in
    * @param executor
-   * @return java.util.concurrent.Future&lt;ASObject>
+   * @return java.util.concurrent.Future
    */
   public Future<ASObject> read(InputStream in, ExecutorService executor) {
     return readAs(in, ASObject.class, executor);
@@ -479,7 +479,7 @@ public final class IO {
    * Asynchronously read the given reader
    * @param in
    * @param executor
-   * @return java.util.concurrent.Future&lt;ASObject>
+   * @return java.util.concurrent.Future
    */
   public Future<ASObject> read(Reader in, ExecutorService executor) {
     return readAs(in, ASObject.class, executor);
@@ -517,7 +517,7 @@ public final class IO {
    * Asynchronously read the given string as an Activity object
    * @param in
    * @param executor
-   * @return java.util.concurrent.Future&lt;Activity>
+   * @return java.util.concurrent.Future
    */
   public Future<Activity> readAsActivity(String in, ExecutorService executor) {
     return readAsActivity(new StringReader(in), executor);
@@ -527,7 +527,7 @@ public final class IO {
    * Asynchronously read the given inputstream as an Activity object
    * @param in
    * @param executor
-   * @return java.util.concurrent.Future&lt;Activity>
+   * @return java.util.concurrent.Future
    */
   public Future<Activity> readAsActivity(InputStream in, ExecutorService executor) {
     return readAs(in, Activity.class, executor);
@@ -537,7 +537,7 @@ public final class IO {
    * Asynchronously read the given reader as an Activity object
    * @param in
    * @param executor
-   * @return java.util.concurrent.Future&lt;Activity>
+   * @return java.util.concurrent.Future
    */
   public Future<Activity> readAsActivity(Reader in, ExecutorService executor) {
     return readAs(in, Activity.class, executor);
@@ -547,7 +547,7 @@ public final class IO {
    * Asynchronously read the given string as a Collection object
    * @param in
    * @param executor
-   * @return java.util.concurrent.Future&lt;Collection>
+   * @return java.util.concurrent.Future
    */
   public Future<Collection> readAsCollection(String in, ExecutorService executor) {
     return readAsCollection(new StringReader(in), executor);
@@ -557,7 +557,7 @@ public final class IO {
    * Asynchronously read the given input stream as a Collection object
    * @param in
    * @param executor
-   * @return java.util.concurrent.Future&lt;Collection>
+   * @return java.util.concurrent.Future
    */
   public Future<Collection> readAsCollection(InputStream in, ExecutorService executor) {
     return readAs(in, Collection.class, executor);
@@ -567,7 +567,7 @@ public final class IO {
    * Asynchronously read the given reader as a Collection object
    * @param in
    * @param executor
-   * @return java.util.concurrent.Future&lt;Collection>
+   * @return java.util.concurrent.Future
    */
   public Future<Collection> readAsCollection(Reader in, ExecutorService executor) {
     return readAs(in, Collection.class, executor);

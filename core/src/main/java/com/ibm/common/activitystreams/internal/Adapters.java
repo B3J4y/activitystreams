@@ -69,8 +69,8 @@ final class Adapters {
 
   /**
    * Method forEnum.
-   * @param _enumClass Class<E>
-   * @return EnumAdapter<E>
+   * @param _enumClass Class
+   * @return EnumAdapter
    */
   static <E extends Enum<E>>EnumAdapter<E> forEnum(Class<E> _enumClass) {
     return new EnumAdapter<E>(_enumClass);
@@ -78,9 +78,9 @@ final class Adapters {
   
   /**
    * Method forEnum.
-   * @param _enumClass Class<E>
+   * @param _enumClass Class
    * @param or E
-   * @return EnumAdapter<E>
+   * @return EnumAdapter
    */
   static <E extends Enum<E>>EnumAdapter<E> forEnum(Class<E> _enumClass, E or) {
     return new EnumAdapter<E>(_enumClass,or);

@@ -236,7 +236,7 @@ public interface LinkValue
       
       /**
        * Add one or more link values
-       * @param links Iterable<LinkValue>
+       * @param links Iterable
        * @return Builder */
       public Builder add(Iterable<LinkValue> links) {
         for (LinkValue l : links)
@@ -263,7 +263,7 @@ public interface LinkValue
       
       /**
        * Add a link value
-       * @param value Supplier<? extends LinkValue>
+       * @param value Supplier
        * @return Builder */
       public Builder add(Supplier<? extends LinkValue> value) {
         LinkValue val = value.get();
@@ -292,7 +292,7 @@ public interface LinkValue
     
     /**
      * Method iterator.
-     * @return Iterator<LinkValue> 
+     * @return Iterator
      * @see java.lang.Iterable#iterator() 
      **/
     public Iterator<LinkValue> iterator() {

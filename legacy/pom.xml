@@ -41,7 +41,16 @@
             <link>http://www.joda.org/joda-time/apidocs</link>
             <link>http://docs.guava-libraries.googlecode.com/git-history/v16.0.1/javadoc/</link>
           </links>
-        </configuration>
+				<failOnError>false</failOnError>
+			</configuration>
+			<executions>
+				<execution>
+					<id>attach-sources</id>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
       </plugin>
       
       <plugin>

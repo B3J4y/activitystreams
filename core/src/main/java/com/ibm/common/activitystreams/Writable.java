@@ -44,7 +44,7 @@ public interface Writable {
    * default IO instance
    * @param out
    * @param executor
-   * @return Future&lt;?>
+   * @return Future
    */
   Future<?> writeTo(OutputStream out, ExecutorService executor);
   
@@ -58,7 +58,7 @@ public interface Writable {
    * Asynchronously write the object to the writer using the default IO instance
    * @param out
    * @param executor
-   * @return Future&lt;?>
+   * @return Future
    */
   Future<?> writeTo(Writer out, ExecutorService executor);
   
@@ -75,7 +75,7 @@ public interface Writable {
    * @param out
    * @param io
    * @param executor
-   * @return Future&lt;?>
+   * @return Future
    */
   Future<?> writeTo(OutputStream out, IO io, ExecutorService executor);
   
@@ -91,7 +91,7 @@ public interface Writable {
    * @param out
    * @param io
    * @param executor
-   * @return Future&lt;?>
+   * @return Future
    */
   Future<?> writeTo(Writer out, IO io, ExecutorService executor);
   

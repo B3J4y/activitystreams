@@ -642,7 +642,7 @@ public class ASObject
     
     /**
      * Add an attachment
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      **/
     public B attachments(Supplier<? extends LinkValue> link) {
@@ -679,7 +679,7 @@ public class ASObject
   
     /**
      * Set the author
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      **/
     public B author(Supplier<? extends LinkValue> link) {
@@ -716,7 +716,7 @@ public class ASObject
   
     /**
      * Add a duplicate
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      **/
     public B duplicates(Supplier<? extends LinkValue> link) {
@@ -752,7 +752,7 @@ public class ASObject
   
     /**
      * Set the icon
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B */
     public B icon(Supplier<? extends LinkValue> link) {
       return link("icon", link.get());
@@ -786,7 +786,7 @@ public class ASObject
   
     /**
      * Set the image
-     * @param link Supplier<? extends LinkValue> 
+     * @param link Supplier 
      * @return B */
     public B image(Supplier<? extends LinkValue> link) {
       return link("image", link.get());
@@ -820,7 +820,7 @@ public class ASObject
   
     /**
      * Set the location
-     * @param link Supplier<? extends LinkValue>  
+     * @param link Supplier  
      * @return B */
     public B location(Supplier<? extends LinkValue> link) {
       return link("location", link.get());
@@ -854,7 +854,7 @@ public class ASObject
   
     /**
      * Set the generator.
-     * @param link Supplier<? extends LinkValue>  
+     * @param link Supplier  
      * @return B */
     public B generator(Supplier<? extends LinkValue> link) {
       return link("generator", link.get());
@@ -888,7 +888,7 @@ public class ASObject
   
     /**
      * Set the provider
-     * @param link Supplier<? extends LinkValue> 
+     * @param link Supplier 
      * @return B */
     public B provider(Supplier<? extends LinkValue> link) {
       return link("provider", link.get());
@@ -922,7 +922,7 @@ public class ASObject
   
     /**
      * Add a tag
-     * @param link Supplier<? extends LinkValue>  
+     * @param link Supplier  
      * @return B */
     public B tags(Supplier<? extends LinkValue> link) {
       return link("tags", link.get());
@@ -957,7 +957,7 @@ public class ASObject
   
     /**
      * Add in-reply-to
-     * @param link Supplier<? extends LinkValue> 
+     * @param link Supplier 
      * @return B 
      **/
     public B inReplyTo(Supplier<? extends LinkValue> link) {
@@ -974,7 +974,7 @@ public class ASObject
     
     /**
      * Add a replies collection
-     * @param collection Supplier<? extends Collection>
+     * @param collection Supplier
      * @return B */
     public B replies(Supplier<? extends Collection> collection) {
       return set("replies", collection.get());
@@ -1009,7 +1009,7 @@ public class ASObject
     
     /**
      * Set the objectType
-     * @param tv Supplier<? extends TypeValue>
+     * @param tv Supplier
      * @return B 
      **/
     public B objectType(Supplier<? extends TypeValue> tv) {
@@ -1045,7 +1045,7 @@ public class ASObject
   
     /**
      * Set the displayName
-     * @param nlv Supplier<NLV> 
+     * @param nlv Supplier
      * @return B 
      **/
     public B displayName(Supplier<NLV> nlv) {
@@ -1064,7 +1064,7 @@ public class ASObject
   
     /**
      * Set the displayName
-     * @param map Map<String,String>   
+     * @param map Map
      * @return B 
      **/
     public B displayName(Map<String,String> map) {
@@ -1091,7 +1091,7 @@ public class ASObject
   
     /**
      * Set the content
-     * @param nlv Supplier<NLV>
+     * @param nlv Supplier
      * @return B 
      **/
     public B content(Supplier<NLV> nlv) {
@@ -1110,7 +1110,7 @@ public class ASObject
   
     /**
      * Set the content
-     * @param map Map<String,String>
+     * @param map Map
      * @return B 
      **/
     public B content(Map<String,String> map) {
@@ -1137,7 +1137,7 @@ public class ASObject
   
     /**
      * Set the summary
-     * @param nlv Supplier<NLV>
+     * @param nlv Supplier
      * @return B 
      **/
     public B summary(Supplier<NLV> nlv) {
@@ -1156,7 +1156,7 @@ public class ASObject
     
     /**
      * Set the summary
-     * @param map Map<String,String>
+     * @param map Map
      * @return B 
      **/
     public B summary(Map<String,String> map) {
@@ -1183,7 +1183,7 @@ public class ASObject
   
     /**
      * Set the title
-     * @param nlv Supplier<N>
+     * @param nlv Supplier<
      * @return B 
      **/
     public <N extends NLV>B title(Supplier<N> nlv) {
@@ -1202,7 +1202,7 @@ public class ASObject
   
     /**
      * Set the title
-     * @param map Map<String,String>
+     * @param map Map
      * @return B 
      **/
     public B title(Map<String,String> map) {
@@ -1242,7 +1242,7 @@ public class ASObject
     /**
      * Add an action handler
      * @param verb String
-     * @param lv Supplier<? extends LinkValue>
+     * @param lv Supplier
      * @return B
      */
     public B action(String verb, Supplier<? extends LinkValue> lv) {
@@ -1272,7 +1272,7 @@ public class ASObject
     /**
      * Method _nlv.
      * @param key String
-     * @param nlv Supplier<? extends NLV>
+     * @param nlv Supplier
      * @return B 
      **/
     protected B _nlv(String key, Supplier<? extends NLV> nlv) {
@@ -1282,7 +1282,7 @@ public class ASObject
     /**
      * Method _nlv.
      * @param key String
-     * @param map Map<String,String>
+     * @param map Map
      * @return B 
      **/
     protected B _nlv(String key, Map<String,String> map) {
@@ -1349,7 +1349,7 @@ public class ASObject
     
     /**
      * Set the "url"
-     * @param link Supplier<LinkValue>
+     * @param link Supplier
      * @return B 
      **/
     public B url(Supplier<? extends LinkValue> link) {
@@ -1409,7 +1409,7 @@ public class ASObject
     /**
      * Add a link
      * @param name String
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      **/
     public B link(String name, Supplier<? extends LinkValue> link) {
@@ -1467,7 +1467,7 @@ public class ASObject
     /**
      * Set a property
      * @param key String
-     * @param value Supplier<V>
+     * @param value Supplier
      * @return B 
      **/
     public B set(String key, Supplier<?> value) {
@@ -1482,7 +1482,7 @@ public class ASObject
     /**
      * Set a property from a given callable
      * @param key String
-     * @param value Callable<V>
+     * @param value Callable
      * @return B 
      **/
     public B set(String key, Callable<?> value) {
@@ -1525,7 +1525,7 @@ public class ASObject
   
     /**
      * Set the scope
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
     
      * @return B */
     public B scope(Supplier<? extends LinkValue> link) {
@@ -1539,7 +1539,7 @@ public class ASObject
   
   /**
    * Constructor for ASObject.
-   * @param builder ASObject.AbstractBuilder<?,?>
+   * @param builder ASObject.AbstractBuilder
    */
   public ASObject(ASObject.AbstractBuilder<?,?> builder) {
     super(builder);
@@ -1570,7 +1570,7 @@ public class ASObject
   /**
    * Set a property
    * @param key String
-   * @param value Supplier<V>
+   * @param value Supplier
    * @return B 
    **/
   public void set(String key, Supplier<?> value) {
@@ -1586,7 +1586,7 @@ public class ASObject
   /**
    * Set a property from a given callable
    * @param key String
-   * @param value Callable<V>
+   * @param value Callable
    * @return B 
    **/
   public void set(String key, Callable<?> value) {
@@ -1633,7 +1633,7 @@ public class ASObject
    * Return the value of the property if it exists, converting the value
    * to the given Enum class. 
    * @param key String
-   * @param _enumClass Class<E>
+   * @param _enumClass Class
    * @return E
    */
   public <E extends Enum<E>>E getEnum(String key, Class<E> _enumClass) {
@@ -1643,7 +1643,7 @@ public class ASObject
   /**
    * Method getEnum.
    * @param key String
-   * @param _enumClass Class<E>
+   * @param _enumClass Class
    * @param or E
    * @return E
    */
@@ -1833,7 +1833,7 @@ public class ASObject
   /**
    * Method _get.
    * @param key String
-   * @return Optional<V>
+   * @return Optional
    */
   private <V>Optional<V> _get(String key) {
     return Optional.fromNullable((V)map.get(key));
@@ -1842,8 +1842,8 @@ public class ASObject
   /**
    * Method _get.
    * @param key String
-   * @param transform Function<V1,V2>
-   * @return Optional<V2>
+   * @param transform Function
+   * @return Optional
    */
   private <V1,V2>Optional<V2> _get(String key, Function<V1,V2> transform) {
     return this.<V1>_get(key).transform(transform);
@@ -1864,7 +1864,7 @@ public class ASObject
   /**
    * Returns the value of the property, transformed using the given function
    * @param key String
-   * @param transform Function<V1,V2>
+   * @param transform Function
    * @return V2 
    **/
   public <V1,V2>V2 get(String key, Function<V1,V2> transform, V2 defaultValue) {
@@ -1874,7 +1874,7 @@ public class ASObject
   /**
    * Returns the value of the given property converted using the given converter
    * @param key String
-   * @param converter Converter<V1,V2>
+   * @param converter Converter
    * @return V2
    */
   public <V1,V2>V2 get(String key, Converter<V1,V2> converter) {
@@ -1886,7 +1886,7 @@ public class ASObject
    * does not
    * @param key String
    * @param def V2
-   * @param transform Function<V1,V2>
+   * @param transform Function
    * @return V2 
    **/
   public <V1,V2>V2 get(String key, V2 def, Function<V1,V2> transform) {
@@ -2011,7 +2011,7 @@ public class ASObject
   
   /**
    * Return this objects URL LinkValues
-   * @return java.util.Iterable&lt;LinkValue> 
+   * @return java.util.Iterable&lt;LinkValue&gt;
    **/
   public Iterable<LinkValue> url() {
     return links("url");
@@ -2019,7 +2019,7 @@ public class ASObject
   
   /**
    * Return the matching URL LinkValues
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    **/
   public Iterable<LinkValue> url(Predicate<? super LinkValue> test) {
     return links("url", test);
@@ -2069,7 +2069,7 @@ public class ASObject
   /**
    * Return the given set of links
    * @param name String
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   protected Iterable<LinkValue> links(String name) {
     LinkValue lv = this.<LinkValue>get(name);
@@ -2096,7 +2096,7 @@ public class ASObject
   
   /**
    * Return the set of attachments
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> attachments() {
     return links("attachments");
@@ -2105,7 +2105,7 @@ public class ASObject
   /**
    * Return the matching set of attachments;
    * @param test
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> attachments(Predicate<? super LinkValue> test) {
     return links("attachments", test);
@@ -2130,7 +2130,7 @@ public class ASObject
   
   /**
    * Return this authors of this object
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> author() {
     return links("author");
@@ -2138,7 +2138,7 @@ public class ASObject
   
   /**
    * Return the matching authors of this object
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> author(Predicate<? super LinkValue> test) {
     return links("author", test);
@@ -2163,7 +2163,7 @@ public class ASObject
   
   /**
    * Return the collection of duplicates for this object
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> duplicates() {
     return links("duplicates");
@@ -2172,7 +2172,7 @@ public class ASObject
   /**
    * Return the matching duplicates
    * @param test
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> duplicates(Predicate<? super LinkValue> test) {
     return links("duplicates", test);
@@ -2197,14 +2197,14 @@ public class ASObject
   
   /**
    * Return the icons for this object
-   * @return java.util.Iterable<LinkValue> */
+   * @return java.util.Iterable*/
   public Iterable<LinkValue> icon() {
     return links("icon");
   }
   
   /**
    * Return the matching icons for this object
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> icon(Predicate<? super LinkValue> test) {
     return links("icon", test);
@@ -2229,7 +2229,7 @@ public class ASObject
   
   /**
    * Return the image for this object
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> image() {
     return links("image");
@@ -2238,7 +2238,7 @@ public class ASObject
   /**
    * Return the matching images for this object
    * @param test
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> image(Predicate<? super LinkValue> test) {
     return links("image", test);
@@ -2263,7 +2263,7 @@ public class ASObject
   
   /**
    * Return the location associated with this object
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> location() {
     return links("location");
@@ -2272,7 +2272,7 @@ public class ASObject
   /**
    * Return the matching locations associated with this object
    * @param test
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> location(Predicate<? super LinkValue> test) {
     return links("location", test);
@@ -2297,7 +2297,7 @@ public class ASObject
   
   /**
    * Return the generators for this object
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> generator() {
     return links("generator");
@@ -2305,7 +2305,7 @@ public class ASObject
   
   /**
    * Return the matching generators for this object
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> generator(Predicate<? super LinkValue> test) {
     return links("generator", test);
@@ -2330,7 +2330,7 @@ public class ASObject
   
   /**
    * Return the providers for this object
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> provider() {
     return links("provider");
@@ -2338,7 +2338,7 @@ public class ASObject
   
   /**
    * Return the matching providers for this object
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> provider(Predicate<? super LinkValue> test) {
     return links("provider", test);
@@ -2363,7 +2363,7 @@ public class ASObject
   
   /**
    * Return the tags for this object
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> tags() {
     return links("tags");
@@ -2371,7 +2371,7 @@ public class ASObject
   
   /**
    * Return the matching tags for this object
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> tags(Predicate<? super LinkValue> test) {
     return links("tags", test);
@@ -2396,7 +2396,7 @@ public class ASObject
   
   /**
    * Return the inReplyTo links for this object
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> inReplyTo() {
     return links("inReplyTo");
@@ -2404,7 +2404,7 @@ public class ASObject
   
   /**
    * Return the matching inReplyTo links for this object
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> inReplyTo(Predicate<? super LinkValue> test) {
     return links("inReplyTo", test);
@@ -2590,7 +2590,7 @@ public class ASObject
   
   /**
    * Return the scope
-   * @return java.util.Iterable<LinkValue> 
+   * @return java.util.Iterable
    **/
   public Iterable<LinkValue> scope() {
     return links("scope");
@@ -2598,7 +2598,7 @@ public class ASObject
   
   /**
    * Return the matching scope items
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> scope(Predicate<? super LinkValue> test) {
     return links("scope", test);

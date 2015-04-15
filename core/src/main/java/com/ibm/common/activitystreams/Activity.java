@@ -100,7 +100,7 @@ public class Activity
     
     /**
      * Returns the "from" target(s)
-     * @return java.util.Iterable&lt;LinkValue>*/
+     * @return java.util.Iterable&lt;LinkValue&gt;*/
     private Iterable<LinkValue> get(
       Activity activity) {
         return activity.links(label);
@@ -299,7 +299,7 @@ public class Activity
   
     /**
      * Set a participant that indirectly contributed to the activity
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      */
     public B participant(Supplier<? extends LinkValue> link) {
@@ -336,7 +336,7 @@ public class Activity
   
     /**
      * Set the instrument used to complete the activity
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      */
     public B instrument(Supplier<? extends LinkValue> link) {
@@ -373,7 +373,7 @@ public class Activity
   
     /**
      * Set the actor
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      */
     public B actor(Supplier<? extends LinkValue> link) {
@@ -413,7 +413,7 @@ public class Activity
     /**
      * Set the direct object of this activity (the object that has been
      * or will be acted upon)
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      */
     public B object(Supplier<? extends LinkValue> link) {
@@ -450,7 +450,7 @@ public class Activity
   
     /**
      * Set an object that is indirectly affected by the activity
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      */
     public B target(Supplier<? extends LinkValue> link) {
@@ -487,7 +487,7 @@ public class Activity
   
     /**
      * Set an object that describes the result of this activity
-     * @param link Supplier<? extends LinkValue>
+     * @param link Supplier
      * @return B 
      */
     public B result(Supplier<? extends LinkValue> link) {
@@ -568,7 +568,7 @@ public class Activity
   
   /**
    * Return the participant(s)
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    **/
   public Iterable<LinkValue> participant() {
     return links("participant");
@@ -577,7 +577,7 @@ public class Activity
   /**
    * Return the matching participant(s)
    * @param filter
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> participant(Predicate<? super LinkValue> filter) {
     return links("participant", filter);
@@ -602,7 +602,7 @@ public class Activity
   
   /**
    * Return the instrument(s)
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    **/
   public Iterable<LinkValue> instrument() {
     return links("instrument");
@@ -611,7 +611,7 @@ public class Activity
   /**
    * Return the matching instrument(s)
    * @param filter
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> instrument(Predicate<? super LinkValue> filter) {
     return links("instrument", filter);
@@ -636,7 +636,7 @@ public class Activity
   
   /**
    * Returns the actor(s)
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    **/
   public Iterable<LinkValue> actor() {
     return links("actor");
@@ -645,7 +645,7 @@ public class Activity
   /**
    * Return the matching actor(s)
    * @param filter
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> actor(Predicate<? super LinkValue> filter) {
     return links("actor", filter);
@@ -693,7 +693,7 @@ public class Activity
   
   /**
    * Returns the object(s)
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    **/
   public Iterable<LinkValue> object() {
     return links("object");
@@ -702,7 +702,7 @@ public class Activity
   /**
    * Return the matching object(s)
    * @param filter
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> object(Predicate<? super LinkValue> filter) {
     return links("object", filter);
@@ -727,7 +727,7 @@ public class Activity
   
   /**
    * Returns the target(s)
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    **/
   public Iterable<LinkValue> target() {
     return links("target");
@@ -736,7 +736,7 @@ public class Activity
   /**
    * Return the matching target(s)
    * @param filter
-   * @return java.util.Iterable<LinkValue>
+   * @return java.util.Iterable
    */
   public Iterable<LinkValue> target(Predicate<? super LinkValue> filter) {
     return links("target", filter);
@@ -761,7 +761,7 @@ public class Activity
   
   /**
    * Returns the result(s)
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    **/
   public Iterable<LinkValue> result() {
     return links("result");
@@ -770,7 +770,7 @@ public class Activity
   /**
    * Returns the matching result(s)
    * @param filter
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    */
   public Iterable<LinkValue> result(Predicate<? super LinkValue> filter) {
     return links("result", filter);
@@ -806,7 +806,7 @@ public class Activity
   /**
    * Return the audience for this activity
    * @param audience
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    */
   public Iterable<LinkValue> audience(
     Audience audience) {
@@ -817,7 +817,7 @@ public class Activity
    * Return the audience for this activity
    * @param audience
    * @param filter
-   * @return java.util.Iterable&lt;LinkValue>
+   * @return java.util.Iterable&lt;LinkValue&gt;
    */
   public Iterable<LinkValue> audience(
     Audience audience, 

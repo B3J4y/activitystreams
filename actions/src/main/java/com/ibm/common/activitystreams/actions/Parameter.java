@@ -600,7 +600,7 @@ public class Parameter
   
   /**
    * Method enumVals.
-   * @return Iterable<Object>
+   * @return Iterable
    */
   public Iterable<Object> enumeration() {
     if (has("enumeration"))
