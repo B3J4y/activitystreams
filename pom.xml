@@ -97,18 +97,18 @@
 		<url>https://github.com/worldline-messaging/activitystreams/issues</url>
 	</issueManagement>
 
-<!-- 	<distributionManagement>
+	<distributionManagement>
 		<repository>
-			<id>OSS-Sonatype</id>
-			<name>OSS Releases</name>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+			<id>kazan-release-repo</id>
+			<name>Kazan Repository for Maven2</name>
+			<url>${kazan-release-repo-url}</url>
 		</repository>
 		<snapshotRepository>
-			<id>OSS-Sonatype</id>
-			<name>Internal Releases</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>kazan-snapshot-repo</id>
+			<name>Kazan Snapshot Repository for Maven2</name>
+			<url>${kazan-snapshot-repo-url}</url>
 		</snapshotRepository>
-	</distributionManagement> -->
+	</distributionManagement>
 
 	<build>
 		<plugins>
