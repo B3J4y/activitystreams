@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.worldline.activitystream</groupId>
     <artifactId>activitystreams</artifactId>
-    <version>0.0.1-1</version>
+    <version>0.0.1-2-SNAPSHOT</version>
   </parent>
   <artifactId>activitystreams-actions</artifactId>
   <name>Activity Streams 2.0 - Actions</name>
