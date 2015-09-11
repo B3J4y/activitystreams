@@ -145,7 +145,7 @@
     <dependency>
       <groupId>com.worldline.activitystream</groupId>
       <artifactId>activitystreams-core</artifactId>
-      <version>0.0.1-1</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>

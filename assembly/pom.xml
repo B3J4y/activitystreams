@@ -12,22 +12,22 @@
     <dependency>
       <groupId>com.worldline.activitystream</groupId>
       <artifactId>activitystreams-core</artifactId>
-      <version>0.0.1-1</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>com.worldline.activitystream</groupId>
       <artifactId>activitystreams-actions</artifactId>
-      <version>0.0.1-1</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>com.worldline.activitystream</groupId>
       <artifactId>activitystreams-geo</artifactId>
-      <version>0.0.1-1</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>com.worldline.activitystream</groupId>
       <artifactId>activitystreams-legacy</artifactId>
-      <version>0.0.1-1</version>
+      <version>${project.version}</version>
     </dependency>
   </dependencies>
   
