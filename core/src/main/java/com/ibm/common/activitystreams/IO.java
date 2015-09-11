@@ -89,7 +89,8 @@ import com.ibm.common.activitystreams.util.Module;
  * @version $Revision: 1.0 $
  */
 public final class IO {
-
+	private static Boolean lock = Boolean.TRUE;
+	
 	private static IO defaultIo = null;
 	private static IO defaultIoPretty = null;
 	
@@ -124,7 +125,7 @@ public final class IO {
 	 **/
 	public static IO makeDefault(Module... modules) {
 		if (defaultIo == null) {
-			synchronized (defaultIo) {
+			synchronized (lock) {
 				if (defaultIo == null) {
 					IO.Builder builder = make();
 					if (modules != null)
@@ -145,7 +146,7 @@ public final class IO {
 	 */
 	public static IO makeDefaultPrettyPrint(Module... modules) {
 		if (defaultIoPretty == null) {
-			synchronized (defaultIoPretty) {
+			synchronized (lock) {
 				if (defaultIoPretty == null) {
 					IO.Builder builder = make().prettyPrint();
 					if (modules != null) {
