@@ -45,7 +45,7 @@ public abstract class AbstractWritable
     <X extends Writable, B extends AbstractWritableBuilder<X,B>>
     implements Supplier<X> {
     
-    private IO io = null;
+    protected IO io = null;
 
     /**
      * Set the IO instance that should be used 
