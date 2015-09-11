@@ -52,7 +52,6 @@ import static org.joda.time.Duration.standardSeconds;
 
 import java.io.ObjectStreamException;
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.Callable;

@@ -124,11 +124,16 @@ public final class IO {
 	 **/
 	public static IO makeDefault(Module... modules) {
 		if (defaultIo == null) {
-			IO.Builder builder = make();
-			if (modules != null)
-				for (Module mod : modules)
-					builder.using(mod);
-			defaultIo = builder.get();
+			synchronized (defaultIo) {
+				if (defaultIo == null) {
+					IO.Builder builder = make();
+					if (modules != null)
+						for (Module mod : modules){
+							builder.using(mod);
+						}
+					defaultIo = builder.get();
+				}
+			}
 		}
 		return defaultIo;
 
@@ -140,11 +145,17 @@ public final class IO {
 	 */
 	public static IO makeDefaultPrettyPrint(Module... modules) {
 		if (defaultIoPretty == null) {
-		IO.Builder builder = make().prettyPrint();
-		if (modules != null)
-			for (Module mod : modules)
-				builder.using(mod);
-			defaultIoPretty = builder.get();
+			synchronized (defaultIoPretty) {
+				if (defaultIoPretty == null) {
+					IO.Builder builder = make().prettyPrint();
+					if (modules != null) {
+						for (Module mod : modules){
+							builder.using(mod);
+						}
+					}
+					defaultIoPretty = builder.get();
+				}
+			}
 		}
 		return defaultIoPretty;
 	}
