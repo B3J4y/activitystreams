@@ -546,7 +546,7 @@ public class Activity
     }
   }
   
-  Activity(Activity.AbstractBuilder<?, ?> builder) {
+  protected Activity(Activity.AbstractBuilder<?, ?> builder) {
     super(builder);
   }
 
